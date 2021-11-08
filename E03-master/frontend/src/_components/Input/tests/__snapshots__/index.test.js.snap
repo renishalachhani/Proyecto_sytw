@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> Matches snapshots 1`] = `
+<div>
+  <input
+    data-testid="input"
+    name="Prueba"
+    onChange={[MockFunction]}
+    type="otraPrueba"
+    value="valorPrueba"
+  />
+</div>
+`;

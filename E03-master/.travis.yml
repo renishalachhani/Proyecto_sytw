@@ -1,0 +1,40 @@
+language: node_js
+node_js:
+  - stable
+before_install:
+  - cd frontend
+cache:
+  directories:
+    - node_modules
+addons:
+  sonarcloud:
+    organization: sytw2019
+    token:
+      secure: lwEQbrznwAjCqmh/kIgcintJIJXRzmLPiAMX746wSrDQxL4tbFfAGMFNNy+VNi8HkZdgy7+1zGhe1bq1honvejqPHnnwc6fVJlRjR4EF+UTwPLzg4LjjUHySmbb+RvHuJLCzW97hsl8ZL9Izvquydlae04gFxJgZdYK01h/YGvIouRsbQR9NtquGrZeROLc86unDuv7zGFbbpIyQfpir3ddVg2H0pwLCojBprsNTw6xMWI5tPHju51fELzoR3ALeos+pFuaqcXYu3qEcrpDGw1GH7QJbMLc5Ywb2NAKmEgt9GYKDbWobPU8Db4gfwso4RuuX1Q1ccEiwX9yRinD21dvRN9IQETCWUARpK7uq0bvIRsZ5jlIr4s2+Z1UeHxAKr/dFFIQ2WRHHoMTFV8vG60EFjX3D2t9NiPOSQ2rdNvxMFVy8cRaMbLreKlD+PcOFPyEcp/pFokbABgixMTgXUm9aTfK0FBxcd8dvNg+hrj+MMlpd+56wmNTKya/bmmoybZkraVVewysXACPnULYozeIXEdNRaQ48F5Bo+CVa4crJESj9/Gb/KjW3XPBAPs6emN2Q6rHAdYXSUFuKJoDM0dLkwWl86yPIvx8JUEFB1DiJTV95bx9dtPE4AEf8H7q3yK69tIpLDG5VMAYn/7QaaJF2b6Ip36zhwso0sZjzALM=
+script:
+  - npm test
+  - codecov
+  - npm run build
+deploy:
+  - provider: heroku
+    app: eventfinder-sytw
+    api_key:
+      secure: CRkGvAol1y8TvsQVQwYIvZG4EHl5ddV/p14jMiqD9j6cSPN3Cqc+5O0XAC3NvFLiCVwCCAKPnpI+75PT1ApcMypO6lv9/MxcUhx3/YED6nnamPXKcAXzCmG/xXwZBGetApY1pyg0ALYWWXWMhVGHwsVaX/rPB28w2ihHQaWtQbs2yhutCS1xKwqzDWDf/Azr+K6s2z252IjPWYZs1UVL6QZxwmu/6Eg2SM0cTW8dnRfbd/8uqIcSNkbjuSqbwBnb+g+CxEK2F8GVPTsfa/MfeMedBVlBRzvDrPr2bDXa9wqunzF9HQKw8ndvrH3B7ja/w5CUPtiOSsDn1QmU7x/Ao8v2dL/tXEpy8h+n50Uj/dv1GM1XCOKSZqgqSh7FoJX2hRRlNA68NkP83QumwpVXinN0Cx998Ajz/VJtWTGOGpAljwUcQ7TTY2GeJ4cPusQMqmsvaQyKzACba8wVSDSFHO8VMI0Bc0XDoCknHmmSBVWa0cECtUWqJR+JwGJm8F8Jc/zSQ1Fjm/FOxeqD36peIdBO3UXGGpyOL5lDIPYmJGSU1P4f2YYU3joOtX58Cw7cLm/yupjzRm1RsgNikakDm+suBMKphZY5q7z6DwCGujUN0sgtFZB0ZVHVpLMXUwbOsPDng6pzwnpRy520CJHouVgPaeBeReiciNlmohduH9A=
+    stragedy: git
+    on:
+      branch: master
+  - provider: surge
+    skip_cleanup: true
+    project: './frontend/dist'
+    domain: eventfinder.surge.sh
+    on:
+      branch: master
+  - provider: surge
+    skip_cleanup: true
+    project: './frontend/dist'
+    domain: staggingfinder.surge.sh
+    on:
+      branch: dev
+notifications:
+  slack:
+    secure: iKpIDRL46XWkUPRQ8uGELUjW5OS133wZ54f3J/pOSPAL/1y8fsk4zhCEaNEdn53L6gIuLBxzsxG+ySLe1O8aZzDkFhqzluEKiIQuRiyY/C7jVYehRpBy8RDf8xgMaf5PA8bGBdxtYYmofobL2lMU6IrQT17xwsRCBGlIJmvQ7vOykPxmcdByOHR2enDJjkeUbe1Np+L+BUOeYSI602ie3h8SCLAnmM0iN7U6tnFsT6JTLYWjGR8sYN27+trq0VAhDeVui/ruX113o8+7mxwTbnZlQGdAjN709Ydpo2+AGolRpM9C/YpHrUOMOAfZyd64cqjuMEiD6I/WkUR9jn8j93FPax5vTYH44GYifWbfSKagwYcK6tPOzrrWq1hXoNj/JRL2ejdhkEhLfZx2RDS82/r8KD0vPR47MiKtdoAFvCPhBFxtE0DdQV/ZBA9Ak88ZP2LpAHcBsTHKDCA806TKnjzP+VHLNHVgGuELabT/HLu0peMk0PAY9FPzlZmkL/kWEb/Q6juq5HWmtFggs3bArc+AEDcZbXOvQ14G9MRkRVrXU0wNd1DhWSsaOjKTs+taHQUvoN+usxdGpD8uuNp4kAUQA8FwPDD4jyFGr053c2VbMywDhr8ZPKl5SCHcQ5LxflGoqxd4W56bXn0zNKv9oJTG5oqoV0irWqRVXWH6KWA=

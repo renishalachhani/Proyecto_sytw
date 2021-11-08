@@ -1,0 +1,14 @@
+.center {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  text-align: center;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 0 20px 2px black; /*rgba(44, 130, 201, 1);/*rgba(0, 0, 0, 0.4);*/
+  border-radius: 5%;
+}
+
+label {
+  font-size: 15px;
+}

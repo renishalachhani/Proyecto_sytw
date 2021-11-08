@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Snapshot 1`] = `
+<div
+  className="d-flex align-items-center"
+>
+  <div
+    className="bd-highlight justify-content-start ml-4 mr-2"
+  >
+    <img
+      alt="logo"
+      className="img-responsive img-fluid"
+      height="90"
+      src="http://localhost:4000/images/logo.png"
+      width="90"
+    />
+  </div>
+  <div
+    className="p-2 bd-highlight"
+  >
+    <div
+      className="sc-bdVaJa jhRYkF"
+    >
+      <div>
+        <a
+          className="sc-bwzfXH jPTqTw"
+          href="/login"
+          onClick={[Function]}
+        >
+          Sign In
+        </a>
+        <a
+          className="sc-bwzfXH jPTqTw"
+          href="/register"
+          onClick={[Function]}
+        >
+          Sign Up
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

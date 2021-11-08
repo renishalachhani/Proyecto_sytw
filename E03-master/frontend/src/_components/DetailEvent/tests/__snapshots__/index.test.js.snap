@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DetailEvent /> Snapshot 1`] = `
+<div>
+  <img
+    alt="Concierto"
+    className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+    height="140"
+    src="http://localhost:4000/images/book.jpg"
+    title="title"
+  />
+  <div
+    className="card-content"
+  >
+    <div
+      className="media"
+    >
+      <div
+        className="media-content"
+      >
+        <p
+          className="title is-4"
+        >
+          title
+        </p>
+        <p
+          className="subtitle is-6"
+        >
+          8 de Septiembre
+        </p>
+      </div>
+    </div>
+    <div
+      className="content"
+    >
+      El autor estará firmando libros en la libreria Lemus de La Laguna
+    </div>
+  </div>
+</div>
+`;

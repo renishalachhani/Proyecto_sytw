@@ -1,0 +1,4 @@
+﻿{
+  "connectionString": "mongodb://localhost/node-mongo-registration-login-api",
+  "secret": "This will be our secret for SyTW. This iwill be our secret;)"
+}

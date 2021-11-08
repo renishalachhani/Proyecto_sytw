@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> Snapshot 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <button
+    className="MuiButtonBase-root MuiCardActionArea-root"
+    disabled={false}
+    onBlur={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <img
+      alt="Firma de Libros de Miguel Noguera"
+      className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+      height="140"
+      src="http://localhost:4000/images/book.jpg"
+      title="Firma de Libros de Miguel Noguera"
+    />
+    <div
+      className="MuiCardContent-root"
+    >
+      <p
+        className="MuiTypography-root text-truncate MuiTypography-h5 MuiTypography-gutterBottom"
+        style={
+          Object {
+            "maxWidth": "230px",
+          }
+        }
+      >
+        Firma de Libros de Miguel Noguera
+      </p>
+      <p
+        className="MuiTypography-root text-truncate MuiTypography-body2 MuiTypography-colorTextSecondary"
+        style={
+          Object {
+            "maxWidth": "240px",
+          }
+        }
+      />
+      <br />
+      <div
+        className="text-truncate"
+        style={
+          Object {
+            "maxWidth": "240px",
+          }
+        }
+      >
+        Place: 
+      </div>
+      <br />
+       
+      <br />
+      Date: 
+    </div>
+    <span
+      className="MuiCardActionArea-focusHighlight"
+    />
+  </button>
+</div>
+`;

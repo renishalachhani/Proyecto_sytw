@@ -1,0 +1,22 @@
+/* otras opciones de colores abajo*/
+
+/*background: rgb(174,238,213);
+background: radial-gradient(circle, rgba(174,238,213,1) 0%, rgba(77,21,233,1) 83%);*/
+/*background: rgb(174,238,213);
+background: radial-gradient(circle, rgba(174,238,213,1) 0%, rgba(2,2,64,1) 83%); */
+
+/*background: rgb(207,111,134);
+background: radial-gradient(circle, rgba(207,111,134,1) 0%, rgba(212,21,52,1) 8%, rgba(119,65,66,1) 16%, rgba(138,158,31,1) 27%, rgba(138,174,71,1) 39%, rgba(51,201,49,1) 46%, rgba(78,168,166,1) 59%, rgba(90,51,121,1) 65%, rgba(5,5,45,1) 86%); */
+
+/* Main content */
+.main {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 80vh;
+  background: rgb(174, 229, 238);
+  background: radial-gradient(
+    circle,
+    rgba(174, 229, 238, 1) 0%,
+    rgba(25, 111, 212, 0.8) 80%
+  );
+}
